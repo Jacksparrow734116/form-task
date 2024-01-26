@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Registration Form</title>
+</head>
+<body>
+
+<form id="registrationForm">
+  <div class="column">
+    <label class="label-column" for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" oninput="validateName('firstName')" required>
+    <div class="error" id="firstNameError"></div>
+
+    <label class="label-column" for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" oninput="validateName('lastName')" required>
+    <div class="error" id="lastNameError"></div>
+
+    <label class="label-column" for="email">Email:</label>
+    <input type="email" id="email" name="email" oninput="validateEmail()" required>
+    <div class="error" id="emailError"></div>
+
+    <label class="label-column" for="mobileNumber">Mobile Number:</label>
+    <input type="text" id="mobileNumber" name="mobileNumber" oninput="validateMobileNumber()" required>
+    <div class="error" id="mobileNumberError"></div>
+  </div>
+
+  <div class="column">
+    <label class="label-column" for="dobDay">Date of Birth:</label>
+    <div class="dob-container">
+        <select id="dobDay" name="dobDay" onchange="validateDateOfBirth()" required>
+       
+        </select>
+        <select id="dobMonth" name="dobMonth" onchange="validateDateOfBirth()" required>
+         
+        </select>
+        <select id="dobYear" name="dobYear" onchange="validateDateOfBirth()" required>
+    
+        </select>
+      </div>
+    <div class="error" id="dobError"></div>
+
+    <label class="label-column">Gender:</label>
+    <div class="radio-group">
+      <label>Male<input type="radio" name="gender" value="Male" required></label>
+      <label>Female<input type="radio" name="gender" value="Female" required></label>
+      <label>Others<input type="radio" name="gender" value="Others" required></label>
+    </div>
+    <div class="error" id="genderError"></div>
+
+    <label class="label-column" for="city">City:</label>
+    <select id="city" name="city" required>
+     
+    </select>
+    <div class="error" id="cityError"></div>
+
+    <label class="label-column" for="pincode">Pincode:</label>
+    <input type="text" id="pincode" name="pincode" oninput="validatePincode()" pattern="[0-9]{6}" required>
+    <div class="error" id="pincodeError"></div>
+  </div>
+
+  <button type="button" onclick="validateForm()">Register</button>
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,95 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  form {
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 40px;
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .label-column {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  input:focus, select:focus {
+    border-color: #4caf50;
+  }
+  
+  .error {
+    color: red;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .radio-group label {
+    display: flex;
+    margin-bottom: 10px;
+    
+    color: #333;
+  }
+  
+  .radio-group input {
+    margin-right: 10px;
+  }
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  .dob-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  #dobDay,
+  #dobMonth,
+  #dobYear {
+    width: 50px;
+    padding: 12px;
+  }
+  
